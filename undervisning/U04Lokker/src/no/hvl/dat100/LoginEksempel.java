@@ -42,27 +42,26 @@ public class LoginEksempel {
 			System.out.print("Login\nBrukernavn:");
 			brukernavn = input.nextLine();
 			
-			// TODO - START
 			boolean loggedinn = false;
 			int forsok = 0;
-			
+					
 			do {
 				
 				forsok++;
-				
 				System.out.print("Passord:");
 				String inpassord = input.nextLine();
 				
 				if (inpassord.equals(passord)) {
-					System.out.println("Logged inn");
 					loggedinn = true;
-				} else {
-					System.out.println("Feil i passord");
 				}
-				
-			} while (!loggedinn && forsok < 3);
 			
-			// TODO - END
+			} while ((!loggedinn) && (forsok < 3));
+			
+			if (loggedinn ) {
+				System.out.println("Du er nå logged inn");
+			} else {
+				System.out.println("Ikke flere forsøk");
+			}
 			
 			break;
 		default:
